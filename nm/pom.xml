@@ -10,6 +10,7 @@
 
     <modules>
         <module>nacosdemo</module>
+        <module>nm-common</module>
     </modules>
 
     <properties>
@@ -53,6 +54,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.nm</groupId>
+                <artifactId>nm-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

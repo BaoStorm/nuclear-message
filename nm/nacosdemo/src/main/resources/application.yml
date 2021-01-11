@@ -7,4 +7,10 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
   application:
-    name: nacos_demo
+    name: nacos-demo
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000

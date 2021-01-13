@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: nacos-demo
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955

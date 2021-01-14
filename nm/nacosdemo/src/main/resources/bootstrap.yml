@@ -7,3 +7,30 @@ spring:
         server-addr: 127.0.0.1:8848
         file-extension: yml
         namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955
+
+#server:
+#  port: 8010
+#
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955
+#    sentinel:
+#      datasource:
+#        ds:
+#          nacos:
+#            server-addr: 127.0.0.1:8848
+#            data-id: ${spring.application.name}-sentinel
+#            group-id: DEFAULT_GROUP
+#            rule-type: flow
+#      transport:
+#        dashboard: 127.0.0.1:8858
+#      eager: true
+#feign:
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000

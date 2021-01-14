@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: nm-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955
+
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.http.server.reactive: debug
+    org.springframework.web.reactive: debug
+    reactor.ipc.netty: debug
+
+
+#server:
+#  port: 8011
+#
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: nacos-demo
+#          uri: lb://nacos-demo
+#          predicates:
+#            - Path=/demo/**
+#          filters:
+#            - RewritePath=/demo/(?<oldPath>.*), /${oldPath}

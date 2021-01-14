@@ -11,6 +11,7 @@
     <modules>
         <module>nacosdemo</module>
         <module>nm-common</module>
+        <module>nm-gateway</module>
     </modules>
 
     <properties>

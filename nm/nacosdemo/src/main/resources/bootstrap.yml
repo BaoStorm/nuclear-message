@@ -8,6 +8,14 @@ spring:
         file-extension: yml
         namespace: 43706abe-5793-42d5-a3ed-55a2ef7b1955
 
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0整合Demo
+  try-host: http://localhost:${server.port}
+
 #server:
 #  port: 8010
 #

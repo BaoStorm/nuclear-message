@@ -3,6 +3,8 @@ package com.nm.nacosdemo.controller;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.nm.nmcommon.model.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,9 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @author baostorm
  */
 @RestController
+@Api(tags = "test模块")
 public class TestController {
     @GetMapping("/test/get")
     @SentinelResource(value = "getByCode",blockHandler = "handleException")
+    @ApiOperation(value = "根据产品编码查找对应的产品")
     public Result<String > get() {
         return Result.succeed("Hello Nacos Demo");
     }

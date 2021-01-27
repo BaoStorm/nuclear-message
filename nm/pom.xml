@@ -12,6 +12,7 @@
         <module>nacosdemo</module>
         <module>nm-common</module>
         <module>nm-gateway</module>
+        <module>nm-oauth</module>
     </modules>
 
     <properties>
@@ -21,7 +22,10 @@
         <spring-cloud-alibaba-dependencies.version>2.2.3.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring-boot-dependencies.version>2.2.5.RELEASE</spring-boot-dependencies.version>
         <spring-cloud-dependencies.version>Hoxton.SR8</spring-cloud-dependencies.version>
+        <spring-cloud-starter-oauth2.version>2.2.4.RELEASE</spring-cloud-starter-oauth2.version>
         <commons-collections4.version>4.4</commons-collections4.version>
+        <mybatis-plus-boot-starter.version>3.4.0</mybatis-plus-boot-starter.version>
+        <mysql-connector-java.version>8.0.13</mysql-connector-java.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <docker-maven-plugin.version>1.2.2</docker-maven-plugin.version>
         <swagger.version>3.0.0</swagger.version>
@@ -103,6 +107,34 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-common</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!-- mybatis-plus start -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <!-- 加入spring security spring security oauth2的处理 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-oauth2</artifactId>
+                <version>${spring-cloud-starter-oauth2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
